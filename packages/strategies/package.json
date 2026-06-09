@@ -1,0 +1,32 @@
+{
+  "name": "@amm/strategies",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsc -p tsconfig.json --watch"
+  },
+  "dependencies": {
+    "@amm/core": "workspace:*",
+    "@amm/shared": "workspace:*",
+    "@amm/venues": "workspace:*",
+    "@solana/web3.js": "^1.98.2",
+    "bn.js": "^5.2.2",
+    "decimal.js": "^10.4.3"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.6",
+    "@types/node": "^22.7.4",
+    "typescript": "^5.6.2"
+  }
+}

@@ -1,0 +1,59 @@
+# Build artifacts
+dist/
+build/
+.next/
+.turbo/
+*.tsbuildinfo
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Logs
+*.log
+logs/
+pino-*.log
+
+# Local state and secrets
+.env
+.env.*
+!.env.example
+!.env.devnet
+!.env.mainnet.example
+*.key
+*.pem
+*.keypair.json
+wallet*.json
+secrets/
+vault.enc
+vault*.json
+~/.amm/
+.amm/
+.amm-devnet/
+.amm-mainnet/
+.amm-treasury/
+
+# Forensic snapshots (may contain vault.enc / DB copies)
+_vault-investigation-snapshot/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Local DB / state
+*.sqlite
+*.sqlite-journal
+*.db
+data/state.db*
+
+# Coverage
+coverage/
+
+# Legacy reference (kept locally but not built)
+legacy/node_modules/
+legacy/dist/

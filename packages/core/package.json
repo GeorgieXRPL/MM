@@ -1,0 +1,37 @@
+{
+  "name": "@amm/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsc -p tsconfig.json --watch"
+  },
+  "dependencies": {
+    "@amm/shared": "workspace:*",
+    "@solana/spl-token": "^0.4.9",
+    "@solana/web3.js": "^1.98.2",
+    "better-sqlite3": "^11.5.0",
+    "bn.js": "^5.2.2",
+    "bs58": "^6.0.0",
+    "jito-ts": "^4.1.2",
+    "socks": "^2.8.3",
+    "undici": "^6.21.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/bn.js": "^5.1.6",
+    "@types/node": "^22.7.4",
+    "typescript": "^5.6.2"
+  }
+}
